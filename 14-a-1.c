@@ -1,22 +1,19 @@
 #include<stdio.h>
 void main(){
-	int n,m,i,j,a[n];
-	printf("enter array size:");
+	int n,i=0;
+	printf("enter array size n:");
 	scanf("%d",&n);
+	int a[n];
 	for(i=0;i<n;i++){
-		printf("enter value of array:");
+		printf("enter value of array a[%d]:",i);
 		scanf("%d",&a[i]);
-		
 	}
-	for(m=0;m<n;m++){
-		printf("here is your array: %d\n",a[m]);
+	printf("normal order\n");
+	for(i=0;i<n;i++){
+		printf("%d",a[i]);
 	}
-
-	for(j=(n-1);j>=0;j--){
-			printf("your output is:");
-			printf("\n");
-		printf("your array index a[%d]:",j);
-		printf("%d",a[j]);
-		printf("\n");
+	printf("\nrevers order\n");
+	for(i=n-1;i>=0;i--){
+		printf("%d",a[i]);
 	}
 }
